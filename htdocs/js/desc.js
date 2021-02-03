@@ -1,0 +1,21 @@
+require.config({
+	paths:{
+		"jquery":"jquery-1.11.3",
+		"jquery-cookie":"jquery.cookie",
+		"goodList":"goodList",
+		"nav":"nav",
+		"descData":"descData"
+	},
+	shim:{
+		//设置依赖关系
+		"jquery-cookie":["jquery"]
+	}
+})
+require(["nav"],function(nav){
+	nav.topNav();
+	nav.allGoods();
+	nav.sideNav();
+})
+require(["descData"],function(descData){
+	descData.download();
+})
